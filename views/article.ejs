@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include header %>
+  </head>
+  <body>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Article ID</th>
+          <th scope="col">Article Name</th>
+          <th scope="col">Date Created</th>
+          <th scope="col">Date Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% rows.forEach(v=>{%>
+        <tr class="table-light">
+          <th scope="row"><%=v.article_id %></th>
+          <td scope="col"><%=v.article_name %></td>
+          <td scope="col"><%=v.created_at %></td>
+          <td scope="col"><%=v.update_at %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>
